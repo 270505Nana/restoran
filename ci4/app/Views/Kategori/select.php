@@ -1,2 +1,9 @@
-<h1>Select Data Kategori</h1>
-<h2>Ini adalah view yang dipanggil</h2>
+<h1><?= $judul ?></h1>
+
+<?php foreach($kategori as $key => $value):?>
+<h2><?= $value ?></h2>
+<?php endforeach;?>
+
+<!-- kalau mau ambil satu data aja -->
+<!-- berdasarkan index -->
+<?= $kategori[0]?>

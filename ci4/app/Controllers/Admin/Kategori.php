@@ -19,8 +19,16 @@ class Kategori extends BaseController
     }
 
     public function select(){
+
+        $data = [
+            'judul' => 'SELECT DATA',
+            'kategori' => ['Makanan', 'Minuman', 'Snack']
+        ];
+       
+        print_r($data);
+
         echo view ("template/header");
-        echo view ("Kategori/select");
+        echo view ("Kategori/select",$data);
         echo view ("template/footer");
     }
 
