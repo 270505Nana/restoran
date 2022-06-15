@@ -19,7 +19,9 @@ class Kategori extends BaseController
     }
 
     public function select(){
-        echo "Menampilkan semua data";
+        echo view ("template/header");
+        echo view ("Kategori/select");
+        echo view ("template/footer");
     }
 
     public function selectWhere($id = null){
@@ -27,11 +29,15 @@ class Kategori extends BaseController
     }
 
     public function formInsert(){
-        echo "Menampilkan form insert";
+        echo view ("template/header");
+        echo view ("Kategori/forminsert");
+        echo view ("template/footer");
     }
 
     public function formUpdate(){
-        echo "Menampilkan form update";
+        echo view ("template/header");
+        echo view ("Kategori/update");
+        echo view ("template/footer");
     }
 
     public function update($id = null){
