@@ -1,7 +1,12 @@
-<?php namespace App\Controllers;
+<?php namespace App\Controllers\Admin;
+// Untuk lokasi si controllers nya itu ada dimana
+// Karena ini dimasukin ke dalam folder lagi
+// ada admin dan front
 
 // posisinya
 //kalo di ci 3 gapake app\controller
+
+use App\Controllers\BaseController;
 
 class Kategori extends BaseController
 // Biasanya di ci 3

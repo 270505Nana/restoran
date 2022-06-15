@@ -1,7 +1,12 @@
-<?php
+<?php namespace App\Controllers\Admin;
+// Untuk lokasi si controllers nya itu ada dimana
+// Karena ini dimasukin ke dalam folder lagi
+// ada admin dan front
 
-namespace App\Controllers;
+// posisinya
+//kalo di ci 3 gapake app\controller
 
+use App\Controllers\BaseController;
 class Menu extends BaseController
 {
     public function index()
