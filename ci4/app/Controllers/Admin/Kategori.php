@@ -24,12 +24,8 @@ class Kategori extends BaseController
             'judul' => 'SELECT DATA',
             'kategori' => ['Makanan', 'Minuman', 'Snack']
         ];
-       
-        print_r($data);
-
-        echo view ("template/header");
-        echo view ("Kategori/select",$data);
-        echo view ("template/footer");
+    
+        return view ("Kategori/select",$data);
     }
 
     public function selectWhere($id = null){
@@ -37,15 +33,13 @@ class Kategori extends BaseController
     }
 
     public function formInsert(){
-        echo view ("template/header");
-        echo view ("Kategori/forminsert");
-        echo view ("template/footer");
+        return view ("Kategori/forminsert");
     }
 
     public function formUpdate(){
-        echo view ("template/header");
-        echo view ("Kategori/update");
-        echo view ("template/footer");
+        return view ("template/header");
+        return view ("Kategori/update");
+        return view ("template/footer");
     }
 
     public function update($id = null){
