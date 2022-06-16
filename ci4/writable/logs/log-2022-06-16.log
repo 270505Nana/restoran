@@ -1,0 +1,30 @@
+CRITICAL - 2022-06-16 03:48:39 --> Class "App\Models\Kategori_M" not found
+in APPPATH\Controllers\Admin\Kategori.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Kategori->select()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kategori))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-16 03:50:33 --> Class "App\Models\Kategori_M" not found
+in APPPATH\Controllers\Admin\Kategori.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Kategori->select()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kategori))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-16 03:50:37 --> Class "App\Models\Kategori_M" not found
+in APPPATH\Controllers\Admin\Kategori.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Kategori->select()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kategori))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-16 03:51:56 --> Class "App\Models\Kategori_M" not found
+in APPPATH\Controllers\Admin\Kategori.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Kategori->select()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kategori))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-16 03:51:58 --> Class "App\Models\Kategori_M" not found
+in APPPATH\Controllers\Admin\Kategori.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Kategori->select()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kategori))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

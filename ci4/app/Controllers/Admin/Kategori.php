@@ -6,7 +6,11 @@
 // posisinya
 //kalo di ci 3 gapake app\controller
 
+//pemanggilan controller
 use App\Controllers\BaseController;
+
+// pemanggilan model kategori
+use App\Models\Kategori_M;
 
 class Kategori extends BaseController
 // Biasanya di ci 3
@@ -20,9 +24,14 @@ class Kategori extends BaseController
 
     public function select(){
 
+        // membuat object
+        $model_nana = new Kategori_M();
+        $kategori_nana = $model_nana -> findAll();
+        // findAll : fungsi dari CI
+        
         $data = [
             'judul' => 'SELECT DATA',
-            'kategori' => ['Makanan', 'Minuman', 'Snack']
+            'kategori' => $kategori_nana
         ];
     
         return view ("Kategori/select",$data);
