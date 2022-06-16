@@ -9,5 +9,8 @@ class Kategori_M extends Model
     // nama table yang digunakan
 
     protected $allowedFields = ['kategori','keterangan'];
+
+    // untuk hapus data akses primary key
+    protected $primaryKey = 'idkategori';
 }
 ?>

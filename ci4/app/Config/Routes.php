@@ -38,12 +38,16 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 // $routes->get('/', 'Login::index');
 //  $routes->get('/kategori/(:any)', 'admin\kategori::selectWhere/$1');
+
  $routes->group('admin',function($routes){
     $routes -> add ('kategori','Admin\kategori::read');
     $routes -> add ('kategori/insert','Admin\kategori::insert');
     $routes -> add ('kategori/create','Admin\Kategori::create');
     $routes -> add ('kategori/find/(:any)','Admin\kategori::find/$1');
+    $routes -> add ('kategori/delete/(:any)','Admin\kategori::delete/$1');
  });
+
+ $routes->setAutoRoute(false);
 
 // $routes->get('/kategori', 'Kategori::index');
 // $routes->get('/menu', 'Menu::index');
