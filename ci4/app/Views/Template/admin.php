@@ -14,6 +14,8 @@
         <a href="<?= base_url()?>/admin/kategori/update/5"><li>Update</li></a>
     </ul>   
 </nav>
+
     <?= $this->renderSection('content') ?>
+
 </body>
 </html>
