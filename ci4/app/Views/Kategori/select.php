@@ -2,6 +2,8 @@
 
 <?= $this->section('content') ?>
 
+
+<a href="<?= base_url('/admin/kategori/create')?>">Tambah Kategori</a>
 <h1><?= $judul ?></h1>
 
 <table border="1px">

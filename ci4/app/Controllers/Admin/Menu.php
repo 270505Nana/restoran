@@ -11,14 +11,20 @@ class Menu extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
+        return view('menu/form');
     }
 
-    public function select(){
-        echo "Untuk menampilkan data";
+    public function insert(){
+
+        // variable file
+        $file = $this->request->getFile('gambar');
+        // gambar : name dari form
+
+       $name = $file->getName();
+
+       // CI memberikan fasilitas gaperlu bikin folder cukup pake function move aja
+       $file->move('./upload');
+       echo $name."Sudah di upload";
     }
 
-    public function update($id=null,$nama=null){
-        echo "Untul update data dengan id".$id;
-    }
 }

@@ -40,6 +40,8 @@ $routes->setAutoRoute(true);
 //  $routes->get('/kategori/(:any)', 'admin\kategori::selectWhere/$1');
 
  $routes->group('admin',function($routes){
+    
+    $routes -> add ('/','Admin\adminpage::index');
     $routes -> add ('kategori','Admin\kategori::read');
     $routes -> add ('kategori/insert','Admin\kategori::insert');
     $routes -> add ('kategori/create','Admin\Kategori::create');
