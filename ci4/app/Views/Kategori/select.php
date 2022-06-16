@@ -4,12 +4,21 @@
 
 <h1><?= $judul ?></h1>
 
-<?php foreach($kategori as $key => $value):?>
-<h2><?= $value['kategori'] ?></h2>
-<?php endforeach;?>
+<table border="1px">
+    <tr>
+        <th>No</th>
+        <th>Kategori</th>
+        <th>Keterangan</th>
+    </tr>
 
-<!-- kalau mau ambil satu data aja -->
-<!-- berdasarkan index -->
-<?= $kategori[2]['kategori']?>
-
+    <?php $no=1?>
+    <?php foreach($kategori as $key => $value):?>
+    <tr>
+        <td><?= $no++ ?></td>
+        <td><?= $value['kategori'] ?></td>
+        <td><?= $value['keterangan']?></td>
+    </tr>
+    <?php endforeach;?>
+    <!-- $kategori object dari controller kategori -->
+</table>
 <?= $this->endSection() ?>

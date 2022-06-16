@@ -22,30 +22,42 @@ class Kategori extends BaseController
         echo "Belajar CI3";
     }
 
-    public function select(){
+    public function read(){
 
         // membuat object
         $model_nana = new Kategori_M();
-        $kategori_nana = $model_nana -> findAll();
+        $kategori = $model_nana -> findAll();
         // findAll : fungsi dari CI
         
         $data = [
             'judul' => 'SELECT DATA',
-            'kategori' => $kategori_nana
+            'kategori' => $kategori
         ];
     
         return view ("Kategori/select",$data);
     }
 
-    public function selectWhere($id = null){
-        echo "Menampilkan data yang dipilih";
+    // public function selectWhere($id = null){
+    //     echo "Menampilkan data yang dipilih";
+    // }
+
+    public function create(){
+        return view ("kategori/insert");
     }
 
-    public function formInsert(){
-        return view ("Kategori/forminsert");
+    public function insert(){
+
+        // membuat object
+        $model = new Kategori_M();
+        $model -> insert($_POST);
+        // function insert suadah bawaan dari CI
+        // insert -> mengirim data ke database dengan parameter$_POST
+        // sesuai dengan method form yang kita pakai = post
+
+        return redirect()->to(base_url()."/admin/kategori"); 
     }
 
-    public function formUpdate(){
+    public function find(){
         return view ("template/header");
         return view ("Kategori/update");
         return view ("template/footer");

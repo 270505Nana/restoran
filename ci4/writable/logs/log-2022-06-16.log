@@ -28,3 +28,36 @@ in APPPATH\Controllers\Admin\Kategori.php on line 28.
  2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kategori))
  3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-16 05:49:04 --> Undefined variable $kategori
+in APPPATH\Views\Kategori\select.php on line 14.
+ 1 APPPATH\Views\Kategori\select.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'APPPATH\\Views\\Kategori\\select.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Kategori\\select.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Kategori/select', [], true)
+ 5 APPPATH\Controllers\Admin\Kategori.php(37): view('Kategori/select', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Kategori->read()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kategori))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-16 05:49:26 --> Undefined array key "kategori_nana"
+in APPPATH\Views\Kategori\select.php on line 17.
+ 1 APPPATH\Views\Kategori\select.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kategori_nana"', 'APPPATH\\Views\\Kategori\\select.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Kategori\\select.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Kategori/select', [], true)
+ 5 APPPATH\Controllers\Admin\Kategori.php(37): view('Kategori/select', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Kategori->read()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kategori))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-16 05:49:39 --> Undefined variable $kategori
+in APPPATH\Views\Kategori\select.php on line 14.
+ 1 APPPATH\Views\Kategori\select.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'APPPATH\\Views\\Kategori\\select.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Kategori\\select.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Kategori/select', [], true)
+ 5 APPPATH\Controllers\Admin\Kategori.php(37): view('Kategori/select', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Kategori->read()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kategori))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
