@@ -30,7 +30,7 @@ class Kategori extends BaseController
         // findAll : fungsi dari CI
         
         $data = [
-            'judul' => 'SELECT DATA',
+            'judul' => 'DATA KATEGORI',
             'kategori' => $kategori
         ];
     
@@ -57,14 +57,28 @@ class Kategori extends BaseController
         return redirect()->to(base_url()."/admin/kategori"); 
     }
 
-    public function find(){
-        return view ("template/header");
-        return view ("Kategori/update");
-        return view ("template/footer");
+    public function find($id = null){
+
+        $model = new Kategori_M();
+        $kategori = $model -> find($id);
+
+        $data = [
+            'judul' => 'UPDATE DATA',
+            'kategori' => $kategori
+        ];
+    
+        return view("kategori/update",$data);
     }
 
-    public function update($id = null){
-        echo "proses update data";
+    public function update(){
+
+       // membuat objek
+       $model = new Kategori_M();
+
+       $model -> save($_POST);
+       //save : function save update data dari CI
+
+       return redirect()->to(base_url()."/admin/kategori"); 
     }
 
     public function delete($id = null)

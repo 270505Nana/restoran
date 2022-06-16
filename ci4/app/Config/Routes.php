@@ -44,10 +44,11 @@ $routes->setAutoRoute(true);
     $routes -> add ('kategori/insert','Admin\kategori::insert');
     $routes -> add ('kategori/create','Admin\Kategori::create');
     $routes -> add ('kategori/find/(:any)','Admin\kategori::find/$1');
+    $routes -> add ('kategori/update','Admin\kategori::update');
     $routes -> add ('kategori/delete/(:any)','Admin\kategori::delete/$1');
  });
 
- $routes->setAutoRoute(false);
+
 
 // $routes->get('/kategori', 'Kategori::index');
 // $routes->get('/menu', 'Menu::index');
