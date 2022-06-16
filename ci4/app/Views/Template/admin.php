@@ -12,6 +12,7 @@
         <a href="<?= base_url('/admin')?>"><li>Home</li></a>
         <a href="<?= base_url('/admin/kategori')?>"><li>Daftar Kategori</li></a>
         <a href="<?= base_url('/admin/menu')?>"><li>Menu</li></a>
+        <a href="<?= base_url('/admin/user')?>"><li>User</li></a>
     </ul>   
 </nav>
 

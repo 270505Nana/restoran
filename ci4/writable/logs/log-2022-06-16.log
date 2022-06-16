@@ -176,3 +176,24 @@ in APPPATH\Controllers\Admin\Kategori.php on line 71.
  5 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->startController()
  6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-16 11:01:06 --> Undefined variable $session
+in APPPATH\Controllers\Admin\User.php on line 32.
+ 1 APPPATH\Controllers\Admin\User.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Controllers\\Admin\\User.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\User->read()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-16 11:01:29 --> Undefined variable $tbluser
+in APPPATH\Controllers\Admin\User.php on line 33.
+ 1 APPPATH\Controllers\Admin\User.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tbluser', 'APPPATH\\Controllers\\Admin\\User.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\User->read()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-16 11:21:04 --> Undefined variable $session
+in APPPATH\Controllers\Admin\User.php on line 48.
+ 1 APPPATH\Controllers\Admin\User.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Controllers\\Admin\\User.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\User->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

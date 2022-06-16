@@ -1,0 +1,54 @@
+diawali dengan inisialisasi
+=> $session = \Config\Services::session();
+Istilahnya session itu harus diciptakan/dimulai dulu
+---------------------------------------------------------------------------
+
+Baru bisa digunakan sessionnya, diperlukan pengisian data
+$newdata = [
+            'username' => '',
+            '' => '',
+            'logged_in' => TRUE
+        ];
+
+$session->set($newdata);
+---------------------------------------------------------------------------
+
+contoh ketika diterapkan
+$tbluser = [
+            'user'  => 'Nana',
+            'email' => 'nana@gmail.com',
+            'level' => 'Programmer'
+        ];
+
+$session->set($tbluser);
+--------------------------------------------------------------------------------
+
+NOTE:
+1.user : sesuai dengan nama column di database
+2.email, level juga sesuai dengan column yang ada di database
+3.Data yang ada di dalamnya, juga disesuaikan dengan yang ada di database
+--------------------------------------------------------------------------------
+
+Session berhasil dimulai, di refresh.Sekarang gimana menampilkannya? 
+1.Menggunakan get
+$session->get('item');
+
+Jadi disetiap function masing-masing controller harus ada inisialisasi masing-masing
+----------------------------------------------------------------------------------------
+Cara removing session:
+public function delete()
+   {
+    $session = \Config\Services::session();
+    $session->remove('email');
+   }
+-----------------------------------------------------------------------------------------------
+Penghapusan session
+1.remove : hapus session yang dipilih
+2.destroy : hapus semua session, ga cuman email atau cuman user tapi semuanya
+----------------------------------------------------------------------------------------------------
+TIPS!!
+biar ga perlu nulis disetiap function yang aada di controller, bisa pake construct
+public function __construct()
+    {
+        $session = \Config\Services::session();
+    }
