@@ -7,6 +7,9 @@
 //kalo di ci 3 gapake app\controller
 
 use App\Controllers\BaseController;
+
+use App\Models\Kategori_M;
+
 class Menu extends BaseController
 {
     public function index()
@@ -25,6 +28,18 @@ class Menu extends BaseController
        // CI memberikan fasilitas gaperlu bikin folder cukup pake function move aja
        $file->move('./upload');
        echo $name."Sudah di upload";
+    }
+
+    public function option()
+    {
+        $model = new Kategori_M();
+        $kategori = $model->findAll();
+
+        $data = [
+            'kategori' => $kategori
+        ];
+
+        return view ('template/option', $data);
     }
 
 }
