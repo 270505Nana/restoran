@@ -3,6 +3,9 @@
 
 <?= $this->section('content') ?>
 
+<!-- memanggil session flashdata error -->
+<?php echo session()->getFlashdata('info'); ?>
+
 <h1>Form Insert Kategori</h1>
 
 <form action="<?= base_url()?>/admin/kategori/insert" method="post">

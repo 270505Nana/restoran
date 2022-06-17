@@ -57,9 +57,11 @@ class Kategori extends BaseController
         $model = new Kategori_M();
         if($model -> insert($_POST) === false){
             $error = $model->errors();
-            echo $error['kategori'];
+            // membuat session flashdata
+            session()->setFlashdata('info', $error['kategori']);
+            return redirect()->to(base_url("/admin/kategori/create")); 
         }else{
-             return redirect()->to(base_url("/admin/kategori")); 
+            return redirect()->to(base_url("/admin/kategori")); 
         }
         // function insert suadah bawaan dari CI
         // insert -> mengirim data ke database dengan parameter$_POST
