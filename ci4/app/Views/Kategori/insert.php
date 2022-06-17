@@ -6,9 +6,9 @@
 <h1>Form Insert Kategori</h1>
 
 <form action="<?= base_url()?>/admin/kategori/insert" method="post">
-    kategori : <input type="text" name="kategori" required>
+    kategori : <input type="text" name="kategori" class="form-control" required>
     <br>
-    keterangan : <input type="text" name="keterangan" required>
+    keterangan : <input type="text" name="keterangan" class="form-control" required>
     <br>
     <input type="submit" value="SIMPAN" name="simpan">
 </form>

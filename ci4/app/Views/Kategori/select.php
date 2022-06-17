@@ -2,11 +2,11 @@
 
 <?= $this->section('content') ?>
 
+<a class="btn btn-primary" href="<?= base_url('/admin/kategori/create')?>" role="button">Tambah Kategori</a>
 
-<a href="<?= base_url('/admin/kategori/create')?>">Tambah Kategori</a>
 <h1><?= $judul ?></h1>
 
-<table border="1px">
+<table class="table">
     <tr>
         <th>No</th>
         <th>Kategori</th>

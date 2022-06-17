@@ -8,16 +8,32 @@
     <title>Admin Page</title>
 </head>
 <body>
-<nav>
-    <ul>
-        <a href="<?= base_url('/admin')?>"><li>Home</li></a>
-        <a href="<?= base_url('/admin/kategori')?>"><li>Daftar Kategori</li></a>
-        <a href="<?= base_url('/admin/menu')?>"><li>Menu</li></a>
-        <a href="<?= base_url('/admin/user')?>"><li>User</li></a>
-    </ul>   
-</nav>
 
-    <?= $this->renderSection('content') ?>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="<?= base_url('/admin')?>">Admin Page</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="<?= base_url('/admin/kategori')?>">Kategori</a></li>
+                        <li class="list-group-item"><a href="<?= base_url('/admin/menu')?>">Menu</a></li>
+                        <li class="list-group-item"><a href="<?= base_url('/admin/user')?>">User</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-8">
+                <?= $this->renderSection('content') ?>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
