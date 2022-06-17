@@ -13,7 +13,7 @@ if(!empty(session()->getFlashdata('info'))) {
 ?>
 
 <div class="col">
-    <h1>Form Update Kategori</h1>
+    <h3>Form Update Kategori</h3>
 </div>
 
 <form action="<?= base_url()?>/admin/kategori/update" method="post">

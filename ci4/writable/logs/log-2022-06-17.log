@@ -97,3 +97,23 @@ in APPPATH\Views\Kategori\select.php on line 33.
  7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kategori))
  8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-17 03:07:06 --> Undefined variable $kategori
+in APPPATH\Views\menu\select.php on line 40.
+ 1 APPPATH\Views\menu\select.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'APPPATH\\Views\\menu\\select.php', 40)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\menu\\select.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('menu/select', [], true)
+ 5 APPPATH\Controllers\Admin\Menu.php(25): view('menu/select', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Menu->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Menu))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-17 04:36:36 --> syntax error, unexpected double-quote mark, expecting ")"
+in APPPATH\Views\menu\select.php on line 45.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('menu/select', [], true)
+ 3 APPPATH\Controllers\Admin\Menu.php(25): view('menu/select', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Menu->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Menu))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
