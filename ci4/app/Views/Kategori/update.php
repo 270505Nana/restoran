@@ -3,7 +3,14 @@
 
 <?= $this->section('content') ?>
 
-<?php echo session()->getFlashdata('info'); ?>
+<?php 
+if(!empty(session()->getFlashdata('info'))) {
+
+    echo '<div class="alert alert-danger" role="alert">';
+    echo session()->getFlashdata('info'); 
+    echo '</div>';
+}
+?>
 
 <div class="col">
     <h1>Form Update Kategori</h1>

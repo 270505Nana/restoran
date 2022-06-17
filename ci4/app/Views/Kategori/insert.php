@@ -4,10 +4,17 @@
 <?= $this->section('content') ?>
 
 <!-- memanggil session flashdata error -->
-<?php echo session()->getFlashdata('info'); ?>
+<?php 
+if(!empty(session()->getFlashdata('info'))) {
+
+    echo '<div class="alert alert-danger" role="alert">';
+    echo session()->getFlashdata('info'); 
+    echo '</div>';
+}
+?>
 
 <div class="col">
-    <h1>Form Insert Kategori</h1>
+    <h3>Form Insert Kategori</h3>
 </div>
 
 
