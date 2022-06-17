@@ -35,7 +35,7 @@ class Kategori extends BaseController
         $data = [
             'judul' => 'DATA KATEGORI',
             // 'kategori' => $kategori,
-            'kategori' => $model_nana->paginate(2, 'group1'),
+            'kategori' => $model_nana->paginate(2, 'page'),
             'pager' => $model_nana->pager,
         
         ];

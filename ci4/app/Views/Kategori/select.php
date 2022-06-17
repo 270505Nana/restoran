@@ -2,6 +2,18 @@
 
 <?= $this->section('content') ?>
 
+
+<?php
+if (isset($_GET['page_page'])) {
+   $page = $_GET['page_page'];
+   $jumlah = 2;
+   //sesuai dengan paginate
+   $no = ($jumlah * $page) - $jumlah + 1;
+}else{
+    $no = 1;
+}
+?>
+
 <div class="row">
 
     <div class="col-4">
@@ -24,7 +36,7 @@
             <th>Aksi</th>
         </tr>
 
-        <?php $no=1?>
+        <?php $no ?>
         <?php foreach($kategori as $key => $value):?>
         <tr>
             <td><?= $no++ ?></td>
@@ -36,6 +48,6 @@
         <?php endforeach;?>
         <!-- $kategori object dari controller kategori -->
     </table>
-    <?= $pager->links('group1','bootstrap') ?>
+    <?= $pager->links('page','bootstrap') ?>
 </div>
 <?= $this->endSection() ?>
