@@ -18,7 +18,7 @@ if(!empty(session()->getFlashdata('info'))) {
 </div>
 
 
-<form action="<?= base_url()?>/admin/kategori/insert" method="post">
+<form action="<?= base_url('/admin/kategori/insert')?>" method="post">
     
     <div class="form-group">
         <label for="kategori">Kategori</label>
@@ -31,7 +31,8 @@ if(!empty(session()->getFlashdata('info'))) {
     </div>
 
     <div class="form-group mt-2">
-        <input type="submit" value="SIMPAN" name="simpan">
+        <button class="btn btn-success" style="width:100%" type="submit" name="simpan">Simpan</button>
+        
     </div>
         
 </form>

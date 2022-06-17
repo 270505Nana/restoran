@@ -15,16 +15,26 @@ if (isset($_GET['page_page'])) {
 ?>
 
 <div class="row">
+        <h3 style="text-align:center"><?= $judul ?></h3>
+</div>
 
-    <div class="col-4">
-        <a class="btn btn-primary" href="<?= base_url('/admin/menu/create')?>" role="button">Tambah Menu</a>
-    </div>
-
+<div class="row">
     <div class="col">
-        <h3><?= $judul ?></h3>
+        <a class="btn btn-primary my-4" style="width:100%" href="<?= base_url('/admin/menu/create')?>" role="button">Tambah Menu</a>
     </div>
 </div>
 
+<!-- Untuk menampilkan kategori, menggunakan view cells -->
+<div class="row">
+    <div class="col">
+        
+        <form action="<?= base_url('/admin/menu/read')?>" method="get">
+        <!-- diisi  pengambilan view cells -->
+        <?= view_cell('\App\Controllers\Admin\Menu::option')?>
+
+        </form>
+    </div>
+</div>
 
 <div class="row mt-2">
 

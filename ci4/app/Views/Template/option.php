@@ -1,5 +1,7 @@
-<select name="kategori" id="kategori">
-    <?php foreach($kategori as $key => $value):?>
+<div class="form-group">
+    <select class="form-control"  onchange="this.form.submit()" name="idkategori" id="idkategori">
+        <?php foreach($kategori as $key => $value):?>
         <option value="<?= $value['idkategori'] ?>"><?= $value['kategori']?></option>
-    <?php endforeach;?>
-</select>
+        <?php endforeach;?>
+    </select>
+</div>

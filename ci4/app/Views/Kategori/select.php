@@ -15,16 +15,14 @@ if (isset($_GET['page_page'])) {
 ?>
 
 <div class="row">
-
-    <div class="col-4">
-        <a class="btn btn-primary" href="<?= base_url('/admin/kategori/create')?>" role="button">Tambah Kategori</a>
-    </div>
-
-    <div class="col">
-        <h3><?= $judul ?></h3>
-    </div>
+        <h3 style="text-align:center"><?= $judul ?></h3>
 </div>
 
+<div class="row">
+    <div class="col">
+        <a class="btn btn-primary my-4" style="width:100%" href="<?= base_url('/admin/kategori/create')?>" role="button">Tambah Kategori</a>
+    </div>
+</div>
 
 <div class="row mt-2">
 
