@@ -6,14 +6,27 @@
 <!-- memanggil session flashdata error -->
 <?php echo session()->getFlashdata('info'); ?>
 
-<h1>Form Insert Kategori</h1>
+<div class="col">
+    <h1>Form Insert Kategori</h1>
+</div>
+
 
 <form action="<?= base_url()?>/admin/kategori/insert" method="post">
-    kategori : <input type="text" name="kategori" class="form-control" required>
-    <br>
-    keterangan : <input type="text" name="keterangan" class="form-control" required>
-    <br>
-    <input type="submit" value="SIMPAN" name="simpan">
+    
+    <div class="form-group">
+        <label for="kategori">Kategori</label>
+        <input type="text" name="kategori" class="form-control" required>
+    </div>   
+
+    <div class="form-group">
+        <label for="keterangan">Keterangan</label>
+       <input type="text" name="keterangan" class="form-control" required>
+    </div>
+
+    <div class="form-group mt-2">
+        <input type="submit" value="SIMPAN" name="simpan">
+    </div>
+        
 </form>
 
 <?= $this->endSection() ?>

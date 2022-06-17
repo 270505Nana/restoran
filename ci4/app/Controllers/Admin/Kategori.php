@@ -55,6 +55,7 @@ class Kategori extends BaseController
 
         // membuat object
         $model = new Kategori_M();
+
         if($model -> insert($_POST) === false){
             $error = $model->errors();
             // membuat session flashdata
@@ -73,25 +74,36 @@ class Kategori extends BaseController
     public function find($id = null){
 
         $model = new Kategori_M();
-        $kategori = $model -> find($id);
+        $kategori = $model->find($id);
 
         $data = [
             'judul' => 'UPDATE DATA',
             'kategori' => $kategori
         ];
-    
-        return view("kategori/update",$data);
+        return view("kategori/update", $data);
     }
 
     public function update(){
 
        // membuat objek
        $model = new Kategori_M();
+       $id = $_POST['idkategori'];
 
-       $model -> save($_POST);
        //save : function save update data dari CI
 
-       return redirect()->to(base_url("/admin/kategori")); 
+       if ($model -> save($_POST) === false) {
+
+            $error = $model->errors();
+            // membuat session flashdata
+            session()->setFlashdata('info', $error['kategori']);
+            return redirect()->to(base_url("/admin/kategori/find/$id")); 
+       }else{
+            return redirect()->to(base_url("/admin/kategori")); 
+       }
+
+       
+
+       
     }
 
     public function delete($id = null)
