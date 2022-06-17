@@ -197,3 +197,10 @@ in APPPATH\Controllers\Admin\User.php on line 48.
  3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
  4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-16 20:46:43 --> Undefined variable $model
+in APPPATH\Controllers\Admin\Kategori.php on line 38.
+ 1 APPPATH\Controllers\Admin\Kategori.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $model', 'APPPATH\\Controllers\\Admin\\Kategori.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Kategori->read()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Kategori))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,23 @@
+1.Load library 
+$pager = \Config\Services::pager();
+
+2.Pagination
+ 'users' => $model->paginate(10),
+            'pager' => $model->pager,
+        ];
+10 : dibagi jadi berapa
+
+Contoh penerapan:
+$data = [
+            'judul' => 'DATA KATEGORI',
+            // 'kategori' => $kategori,
+            'kategori' => $model_nana->paginate(2),
+            'pager' => $model_nana->pager,
+        
+        ];
+    
+
+3.Tambahkan di viewnya
+</table>
+<?= $pager->links() ?>
+

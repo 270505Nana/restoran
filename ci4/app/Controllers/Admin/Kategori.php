@@ -24,14 +24,20 @@ class Kategori extends BaseController
 
     public function read(){
 
+        // Pagination
+        $pager = \Config\Services::pager();
+
         // membuat object
         $model_nana = new Kategori_M();
-        $kategori = $model_nana -> findAll();
+        // $kategori = $model_nana -> findAll();
         // findAll : fungsi dari CI
         
         $data = [
             'judul' => 'DATA KATEGORI',
-            'kategori' => $kategori
+            // 'kategori' => $kategori,
+            'kategori' => $model_nana->paginate(2, 'group1'),
+            'pager' => $model_nana->pager,
+        
         ];
     
         return view ("Kategori/select",$data);

@@ -27,4 +27,5 @@
     <?php endforeach;?>
     <!-- $kategori object dari controller kategori -->
 </table>
+<?= $pager->links('group1','bootstrap') ?>
 <?= $this->endSection() ?>
