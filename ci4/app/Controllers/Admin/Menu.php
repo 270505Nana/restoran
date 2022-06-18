@@ -102,20 +102,21 @@ class Menu extends BaseController
         ];
 
         $model = new Menu_M();
-        $model -> insert($data);
+       
+
+        if ( $model -> insert($data) === false) {
+            $error = $model->errors();
+            // membuat session flashdata
+            session()->setFlashdata('info', $error);
+            return redirect()->to(base_url("/admin/menu/create")); 
+        } else {
+           $file->move('./upload');
+           return redirect()->to(base_url("/admin/menu")); 
+        }
+        
 
         // Untuk menyimpan foto kedalam folder upload
         //menggunakan function move dari CI
-        $file->move('./upload');
-
-        // if($model -> insert($_POST) === false){
-        //     $error = $model->errors();
-            // membuat session flashdata
-        //     session()->setFlashdata('info', $error['kategori']);
-        //     return redirect()->to(base_url("/admin/kategori/create")); 
-        // }else{
-        return redirect()->to(base_url("/admin/menu")); 
-        // }
         // function insert suadah bawaan dari CI
         // insert -> mengirim data ke database dengan parameter$_POST
         // sesuai dengan method form yang kita pakai = post
@@ -161,9 +162,16 @@ class Menu extends BaseController
         ];
 
         $model = new Menu_M();
-        $model -> update($id, $data);
-        return redirect()->to(base_url("/admin/menu")); 
-
+        
+        if ($model -> update($id, $data) === false) {
+            $error = $model->errors();
+            // membuat session flashdata
+            session()->setFlashdata('info', $error);
+            return redirect()->to(base_url("/admin/menu/find/$id")); 
+        } else {
+            return redirect()->to(base_url("/admin/menu")); 
+        }
+        
         // Kalau pakai this->request kita pakai yang diatas
         // jadi ga perlu aktifkan request lagi
     }
