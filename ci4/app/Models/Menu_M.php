@@ -7,5 +7,8 @@ class Menu_M extends Model
 {
     protected $table = 'tblmenu';
     // nama table yang digunakan   
+
+    // untuk hapus & update data akses primary key
+    protected $primaryKey = 'idmenu';
 }
 ?>

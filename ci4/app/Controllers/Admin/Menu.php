@@ -78,4 +78,13 @@ class Menu extends BaseController
 
         return view ('template/option', $data);
     }
+
+    public function delete($id = null)
+    {
+        // membuat object
+        $model = new Menu_M();
+        $model -> delete($id);
+
+        return redirect()->to(base_url("/admin/menu")); 
+    }
 }

@@ -71,5 +71,11 @@ if (isset($_GET['page'])) {
         <!-- $Menu object dari controller Menu -->
     </table>
     <?= $pager->makeLinks(1, $tampil, $total, 'bootstrap') ?>
+    <!-- bootstrap : untuk css nya -->
+    <!-- $total : total datanya -->
+    <!-- $tampil : ditampilkannya 2 -->
+    <!-- berarti jadinya 5 data jadi 2 halaman, memanggil var yang udah dibuat
+    di dalam controller menu/read -->
+    <!-- makeLink : function dari code igniter, supaya kita bisa buat custome -->
 </div>
 <?= $this->endSection() ?>
