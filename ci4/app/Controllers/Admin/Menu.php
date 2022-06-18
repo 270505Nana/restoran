@@ -67,6 +67,17 @@ class Menu extends BaseController
        }
     }
 
+    public function create(){
+
+        $model = new Kategori_M();
+        $kategori = $model->findAll();
+
+        $data = [
+            'kategori' => $kategori
+        ];
+        return view ("menu/insert", $data);
+    }
+
     public function option()
     {
         $model = new Kategori_M();
@@ -87,4 +98,6 @@ class Menu extends BaseController
 
         return redirect()->to(base_url("/admin/menu")); 
     }
+
+   
 }

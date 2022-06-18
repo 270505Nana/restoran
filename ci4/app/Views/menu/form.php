@@ -8,9 +8,6 @@
 
 <div class="row">
 
-
-
-
     <h1>UPLOAD GAMBAR</h1>
 
     <form action="<?= base_url('/admin/menu/insert')?>" method="post" enctype="multipart/form-data">
