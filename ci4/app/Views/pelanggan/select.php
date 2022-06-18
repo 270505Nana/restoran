@@ -44,9 +44,19 @@ if (isset($_GET['page_page'])) {
            </td>
 
            <td>
-                <a href="<?= base_url()?>/admin/pelanggan/delete/<?= $value['idpelanggan']?>">
-                Aktif
+                <?php if ($value['aktif'] == 1) { $aktif = "AKTIF";?>
+
+                <a onclick="return confirm('Ubah Status?')" href="<?= base_url()?>/admin/pelanggan/update/<?= $value['idpelanggan']?>/<?= $value['aktif']?>" class="btn btn-primary">
+                <?= $aktif?>
                 </a>
+
+                <?php } else { $aktif = "TIDAK AKTIF";?>
+                 
+                <a onclick="return confirm('Ubah Status?')" href="<?= base_url()?>/admin/pelanggan/update/<?= $value['idpelanggan']?>/<?= $value['aktif']?>" class="btn btn-danger">
+                <?= $aktif?>
+                </a>
+              
+                <?php }?> 
            </td>
         </tr>
         <?php endforeach;?>

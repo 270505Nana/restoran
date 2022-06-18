@@ -7,5 +7,9 @@ class Pelanggan_M extends Model
 {
     protected $table = 'tblpelanggan';
     // nama table yang digunakan
+
+    protected $allowedFields = ['aktif'];
+    // untuk hapus data akses primary key
+    protected $primaryKey = 'idpelanggan';
 }
 ?>

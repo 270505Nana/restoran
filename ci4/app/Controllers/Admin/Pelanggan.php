@@ -25,4 +25,31 @@ class Pelanggan extends BaseController
     
         return view ("Pelanggan/select",$data);
     }
+
+    public function delete($id = null)
+    {
+        $model_nana = new Pelanggan_M();
+        $model_nana->delete($id);
+        return redirect()->to(base_url("/admin/pelanggan")); 
+    }
+
+    public function update($id = null, $isi=1)
+    {
+      
+        $model_nana = new Pelanggan_M();
+
+        if ($isi == 0) {
+            $isi = 1;
+        } else {
+            $isi = 0;
+        }
+        
+        $data = 
+        [
+            'aktif'  => $isi
+        ];
+
+        $model_nana->update($id, $data);
+        return redirect()->to(base_url("/admin/pelanggan")); 
+    }
 }
