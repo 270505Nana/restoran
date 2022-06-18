@@ -20,9 +20,9 @@
             </div>
         </div>
 
-        <div class="row mt-2">
+        <div class="row">
             <div class="col-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card mt-5" style="width: 18rem;">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><a href="<?= base_url('/admin/kategori')?>">Kategori</a></li>
                         <li class="list-group-item"><a href="<?= base_url('/admin/menu')?>">Menu</a></li>

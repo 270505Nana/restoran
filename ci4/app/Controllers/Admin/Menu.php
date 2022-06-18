@@ -20,7 +20,7 @@ class Menu extends BaseController
         $data = [
             'judul' => 'DATA MENU',
             // 'kategori' => $kategori,
-            'menu' => $model_nana->paginate(2, 'page'),
+            'menu' => $model_nana->paginate(5, 'page'),
             'pager' => $model_nana->pager,
         
         ];
@@ -121,6 +121,53 @@ class Menu extends BaseController
         // sesuai dengan method form yang kita pakai = post
 
     }
+
+    public function find($id = null){
+
+        $model = new Menu_M();
+        $menu = $model->find($id);
+
+        $model_kategori = new Kategori_M();
+        $kategori = $model_kategori->findAll();
+
+        $data = [
+            'judul'    => 'UPDATE MENU',
+            'menu'     => $menu,
+            'kategori' => $kategori
+        ];
+        return view("menu/update", $data);
+    }
+
+    public function update()
+    {
+        // Mengambil data -> request
+        $id = $this->request->getPost('idmenu');
+        $file = $this->request->getFile('gambar');
+        // gambar : name dari form
+        $name = $file->getName();
+
+        if (empty($name)) {
+            $name = $this->request->getPost('gambar');
+        } else {
+            $file->move('./upload');
+        }
+        
+        $data = 
+        [
+            'idkategori'  => $this->request->getPost('idkategori'),
+            'menu'        => $this->request->getPost('menu'),
+            'gambar'      => $name,   
+            'harga'       => $this->request->getPost('harga')
+        ];
+
+        $model = new Menu_M();
+        $model -> update($id, $data);
+        return redirect()->to(base_url("/admin/menu")); 
+
+        // Kalau pakai this->request kita pakai yang diatas
+        // jadi ga perlu aktifkan request lagi
+    }
+
 
     public function option()
     {

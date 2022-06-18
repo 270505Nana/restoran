@@ -1,0 +1,7 @@
+CRITICAL - 2022-06-18 03:02:57 --> Undefined variable $request
+in APPPATH\Controllers\Admin\Menu.php on line 144.
+ 1 APPPATH\Controllers\Admin\Menu.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $request', 'APPPATH\\Controllers\\Admin\\Menu.php', 144)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Menu->update()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Menu))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

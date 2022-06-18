@@ -6,7 +6,7 @@
 <?php
 if (isset($_GET['page_page'])) {
    $page = $_GET['page_page'];
-   $jumlah = 2;
+   $jumlah = 5;
    //sesuai dengan paginate
    $no = ($jumlah * $page) - $jumlah + 1;
 }else{
