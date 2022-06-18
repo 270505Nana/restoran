@@ -10,5 +10,9 @@ class Menu_M extends Model
 
     // untuk hapus & update data akses primary key
     protected $primaryKey = 'idmenu';
+
+    // column mana yang mau diisi sama data
+    //column yang boleh diisi
+    protected $allowedFields = ['idkategori','menu', 'gambar', 'harga'];
 }
 ?>

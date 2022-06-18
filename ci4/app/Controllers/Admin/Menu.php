@@ -78,6 +78,46 @@ class Menu extends BaseController
         return view ("menu/insert", $data);
     }
 
+    public function insert()
+    // method untuk kirim data
+    {
+        // menggunakan request, aktifkan dulu
+        $request = \Config\Services::request();
+        // membuat object
+        
+
+        // 1.Mengambil data yang dikirim, menggunakan request
+         $file = $request->getFile('gambar');
+         // gambar : name dari form
+         $name = $file->getName();
+
+        //  2. Membuat array associative 
+        $data = 
+        [
+            'idkategori' => $request->getPost('idkategori'),
+            'menu'       => $request->getPost('menu'),
+            'gambar'     => $name,
+            'harga'      => $request->getPost('harga')
+
+        ];
+
+        $model = new Menu_M();
+        $model -> insert($data);
+
+        // if($model -> insert($_POST) === false){
+        //     $error = $model->errors();
+            // membuat session flashdata
+        //     session()->setFlashdata('info', $error['kategori']);
+        //     return redirect()->to(base_url("/admin/kategori/create")); 
+        // }else{
+        return redirect()->to(base_url("/admin/menu")); 
+        // }
+        // function insert suadah bawaan dari CI
+        // insert -> mengirim data ke database dengan parameter$_POST
+        // sesuai dengan method form yang kita pakai = post
+
+    }
+
     public function option()
     {
         $model = new Kategori_M();
