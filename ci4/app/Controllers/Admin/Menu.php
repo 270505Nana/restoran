@@ -30,7 +30,41 @@ class Menu extends BaseController
 
     public function read()
     {
-        echo "read";
+        $pager = \Config\Services::pager();
+
+       if(isset($_GET['idkategori'])){
+        $id = $_GET['idkategori'];
+
+        // membuat object
+        $model = new Menu_M();
+        $jumlah = $menu = $model->where('idkategori', $id)->findAll();
+        $count = count($jumlah);
+        $tampil = 3;
+        $mulai = 0;
+        // idkategori  : column yang ingin dicari
+        //ini mencari sesuai id kategori
+
+        if (isset($_GET['page'])){
+            $page = $_GET['page'];
+            $mulai = ($tampil * $page) - $tampil;
+        }
+
+        $menu = $model->where('idkategori', $id)->findAll($tampil, $mulai);
+
+
+
+
+        $data = [
+            'judul' => 'DATA PENCARIAN MENU',
+            // 'kategori' => $kategori,
+            'menu'  => $menu,
+            'pager' => $pager,
+            'tampil'=> $tampil,
+            'total' => $count
+        ];
+    
+        return view ("menu/cari",$data);
+       }
     }
 
     public function option()
