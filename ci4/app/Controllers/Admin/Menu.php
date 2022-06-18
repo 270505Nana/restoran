@@ -104,6 +104,10 @@ class Menu extends BaseController
         $model = new Menu_M();
         $model -> insert($data);
 
+        // Untuk menyimpan foto kedalam folder upload
+        //menggunakan function move dari CI
+        $file->move('./upload');
+
         // if($model -> insert($_POST) === false){
         //     $error = $model->errors();
             // membuat session flashdata
