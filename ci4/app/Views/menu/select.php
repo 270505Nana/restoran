@@ -58,7 +58,7 @@ if (isset($_GET['page_page'])) {
             <td>Rp.<?= number_format($value['harga'])?></td>
             <td>
                 <!-- button trash & edit -->
-                <a href="<?= base_url()?>/admin/Menu/delete/<?= $value['idmenu']?>">
+                <a onclick="return confirm('Hapus Data?')" href="<?= base_url()?>/admin/Menu/delete/<?= $value['idmenu']?>">
                 <img src="<?= base_url('/icon/trash.svg')?>"></a>
                 
                 <a href="<?= base_url()?>/admin/Menu/find/<?= $value['idmenu']?>">
