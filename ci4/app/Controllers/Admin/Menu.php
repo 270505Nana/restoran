@@ -46,6 +46,7 @@ class Menu extends BaseController
 
         if (isset($_GET['page'])){
             $page = $_GET['page'];
+            echo $page;
             $mulai = ($tampil * $page) - $tampil;
         }
 

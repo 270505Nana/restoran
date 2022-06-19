@@ -6,7 +6,18 @@
     <h3 style="text-align:center"><?= $judul ?></h3>
 </div>
 
-<div class="row">
+<?php
+if (isset($_GET['page'])) {
+   $page = $_GET['page'];
+   $jumlah = 4;
+   //sesuai dengan paginate
+   $no = ($jumlah * $page) - $jumlah + 1;
+}else{
+    $no = 1;
+}
+?>
+
+<div class="row mt-2">
     <div class="col">
         <table class="table">
             <tr>
@@ -20,16 +31,15 @@
                 <th>Status</th>
             </tr>
 
-            <?php $no=1 ?>
             <?php foreach($order as $value):?>
                 <tr>
                     <td><?= $no++ ?></td>
                     <td><?= $value['idorder'] ?></td>
                     <td><?= $value['pelanggan']?></td>
                     <td><?= $value['tglorder']?></td>
-                    <td><?= $value['total']?></td>
-                    <td><?= $value['bayar']?></td>
-                    <td><?= $value['kembali']?></td>
+                    <td>Rp. <?= number_format($value['total'])?></td>
+                    <td>Rp. <?= number_format($value['bayar'])?></td>
+                    <td>Rp. <?= number_format($value['kembali'])?></td>
                     
                     <td>
                         <?php if ($value['status'] == 1) { $status = "LUNAS";?>
@@ -49,7 +59,7 @@
                 </tr>
             <?php endforeach;?>
         </table>
+        <?= $pager->makeLinks(1, $perPage, $total, 'bootstrap') ?>
     </div>
 </div>
-
 <?= $this->endSection() ?>
