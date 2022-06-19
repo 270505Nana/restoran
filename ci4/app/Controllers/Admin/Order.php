@@ -54,4 +54,29 @@ class Order extends BaseController
         // echo $row[0]['idorder'];
 
     }
+
+    public function find($id = null)
+    {
+        $db      = \Config\Database::connect();
+
+        // Membuat perintah sql untuk database
+        $sql = "SELECT * FROM vorder WHERE idorder = $id";
+        $result = $db->query($sql);
+        // Untuk menampilkan query
+        $row = $result->getResult('array');
+
+        $sql = "SELECT * FROM vorderdetail WHERE idorder = $id";
+        $result = $db->query($sql);
+        // Untuk menampilkan query
+        $detail = $result->getResult('array');
+
+        $data =
+        [
+            'judul'   => "PEMBAYARAN PELANGGAN",
+            'order'   => $row,
+            'detail'  => $detail
+        ];
+
+        return view('order/update',$data);
+    }
 }

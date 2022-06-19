@@ -44,13 +44,11 @@ if (isset($_GET['page'])) {
                     <td>
                         <?php if ($value['status'] == 1) { $status = "LUNAS";?>
 
-                            <a onclick="return confirm('Ubah Status?')"  class="btn btn-primary">
-                            <?= $status?>
-                            </a>
+                            <a class="btn btn-primary"> <?= $status?></a>
 
                             <?php } else { $status = "BELUM LUNAS";?>
                             
-                            <a onclick="return confirm('Ubah Status?')"  class="btn btn-danger">
+                            <a href="<?= base_url()?>/admin/order/find/<?= $value['idorder']?>"class="btn btn-danger">
                             <?= $status?>
                             </a>
                     
