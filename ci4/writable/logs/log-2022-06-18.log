@@ -37,3 +37,60 @@ in APPPATH\Controllers\Admin\Order.php on line 24.
  4 SYSTEMPATH\CodeIgniter.php(417): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
  5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-18 22:30:34 --> Table 'dbrestoran.vorder' doesn't exist
+CRITICAL - 2022-06-18 22:30:34 --> Table 'dbrestoran.vorder' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM vorder ORDER BY status ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM vorder ORDER BY status ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM vorder ORDER BY status ASC')
+ 4 APPPATH\Controllers\Admin\Order.php(16): CodeIgniter\Database\BaseConnection->query('SELECT * FROM vorder ORDER BY status ASC')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Order->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-18 23:21:51 --> Array to string conversion
+in APPPATH\Controllers\Admin\Order.php on line 21.
+ 1 APPPATH\Controllers\Admin\Order.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Admin\\Order.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Order->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-18 23:22:03 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in APPPATH\Controllers\Admin\Order.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Order->index()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-18 23:33:50 --> Undefined variable $no
+in APPPATH\Views\order\select.php on line 21.
+ 1 APPPATH\Views\order\select.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $no', 'APPPATH\\Views\\order\\select.php', 21)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\order\\select.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('order/select', [], true)
+ 5 APPPATH\Controllers\Admin\Order.php(27): view('order/select', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Order->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-18 23:34:28 --> Undefined array key "idkategori"
+in APPPATH\Views\order\select.php on line 24.
+ 1 APPPATH\Views\order\select.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idkategori"', 'APPPATH\\Views\\order\\select.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\order\\select.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('order/select', [], true)
+ 5 APPPATH\Controllers\Admin\Order.php(27): view('order/select', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Order->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-18 23:34:41 --> Undefined array key "idkategori"
+in APPPATH\Views\order\select.php on line 24.
+ 1 APPPATH\Views\order\select.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idkategori"', 'APPPATH\\Views\\order\\select.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\order\\select.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('order/select', [], true)
+ 5 APPPATH\Controllers\Admin\Order.php(27): view('order/select', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Order->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
