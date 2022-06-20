@@ -34,5 +34,33 @@ class User extends BaseController
         return view ("user/select",$data);
     }
 
-   
+    public function create()
+    {
+       $data = 
+       [
+        'level' => ['Admin','Koki','Kasir']
+       ];
+
+       return view ("user/insert",$data);
+    }
+
+    public function insert()
+    {
+        // membuat object
+        $model = new User_M();
+
+        $model -> insert($_POST);
+
+        // if($model -> insert($_POST) === false){
+        //     $error = $model->errors();
+        //     // membuat session flashdata
+        //     session()->setFlashdata('info', $error['kategori']);
+        //     return redirect()->to(base_url("/admin/kategori/create")); 
+        // }else{
+            return redirect()->to(base_url("/admin/user")); 
+        // }
+        // function insert suadah bawaan dari CI
+        // insert -> mengirim data ke database dengan parameter$_POST
+        // sesuai dengan method form yang kita pakai = post
+    }
 }

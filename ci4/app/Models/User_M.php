@@ -8,5 +8,6 @@ class User_M extends Model
     protected $table = 'tbluser';
     // nama table yang digunakan
     
+    protected $allowedFields = ['user','email','password','level','aktif'];
 }
 ?>
