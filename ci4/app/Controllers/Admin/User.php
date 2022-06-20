@@ -64,6 +64,26 @@ class User extends BaseController
         // sesuai dengan method form yang kita pakai = post
     }
 
+    public function update($id = null, $isi=1)
+    {
+      
+        $model_nana = new User_M();
+
+        if ($isi == 0) {
+            $isi = 1;
+        } else {
+            $isi = 0;
+        }
+        
+        $data = 
+        [
+            'aktif'  => $isi
+        ];
+
+        $model_nana->update($id, $data);
+        return redirect()->to(base_url("/admin/user")); 
+    }
+
     public function delete($id = null)
     {
         // membuat object
@@ -72,4 +92,6 @@ class User extends BaseController
 
         return redirect()->to(base_url("/admin/user")); 
     }
+
+
 }

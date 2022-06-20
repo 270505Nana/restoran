@@ -47,11 +47,11 @@ if (isset($_GET['page_page'])) {
             <td>
                 <?php if ($value['aktif'] == 1) { $aktif = "AKTIF";?>
 
-                    <a class="btn btn-primary"> <?= $aktif?></a>
+                    <a href="<?= base_url()?>/admin/user/update/<?= $value['iduser']?>/<?= $value['aktif']?>" class="btn btn-primary"> <?= $aktif?></a>
 
                     <?php } else { $aktif = "BANNED";?>
                     
-                    <a class="btn btn-danger">
+                    <a href="<?= base_url()?>/admin/user/update/<?= $value['iduser']?>/<?= $value['aktif']?>" class="btn btn-danger">
                     <?= $aktif?>
                     </a>
             
