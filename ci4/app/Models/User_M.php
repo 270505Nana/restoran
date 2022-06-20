@@ -9,5 +9,9 @@ class User_M extends Model
     // nama table yang digunakan
     
     protected $allowedFields = ['user','email','password','level','aktif'];
+
+    // untuk hapus data akses primary key
+    protected $primaryKey = 'iduser';
+
+
 }
-?>

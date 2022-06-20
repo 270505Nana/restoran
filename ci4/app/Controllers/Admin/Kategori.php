@@ -100,10 +100,6 @@ class Kategori extends BaseController
        }else{
             return redirect()->to(base_url("/admin/kategori")); 
        }
-
-       
-
-       
     }
 
     public function delete($id = null)

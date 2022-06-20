@@ -63,4 +63,13 @@ class User extends BaseController
         // insert -> mengirim data ke database dengan parameter$_POST
         // sesuai dengan method form yang kita pakai = post
     }
+
+    public function delete($id = null)
+    {
+        // membuat object
+        $model = new User_M();
+        $model -> delete($id);
+
+        return redirect()->to(base_url("/admin/user")); 
+    }
 }
