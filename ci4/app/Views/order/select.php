@@ -6,6 +6,20 @@
     <h3 style="text-align:center"><?= $judul ?></h3>
 </div>
 
+<div class="row">
+    <div class="col">
+    <?php 
+    if(!empty(session()->getFlashdata('info'))) {
+
+        echo '<div class="alert alert-success" role="alert">';
+        echo session()->getFlashdata('info'); 
+        echo '</div>';
+    }
+    ?>
+    </div>
+</div>
+
+
 <?php
 if (isset($_GET['page'])) {
    $page = $_GET['page'];
