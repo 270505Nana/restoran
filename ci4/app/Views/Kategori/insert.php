@@ -17,7 +17,6 @@ if(!empty(session()->getFlashdata('info'))) {
     <h3>Form Insert Kategori</h3>
 </div>
 
-
 <form action="<?= base_url('/admin/kategori/insert')?>" method="post">
     
     <div class="form-group">
@@ -34,7 +33,5 @@ if(!empty(session()->getFlashdata('info'))) {
         <button class="btn btn-success" style="width:100%" type="submit" name="simpan">Simpan</button>
         
     </div>
-        
 </form>
-
 <?= $this->endSection() ?>

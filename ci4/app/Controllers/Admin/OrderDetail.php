@@ -28,4 +28,30 @@ class OrderDetail extends BaseController
     
         return view ("orderdetail/select",$data);
     }
+
+    public function cari()
+    {
+        if (isset($_POST['awal'])) {
+            $awal = $_POST['awal'];
+            $sampai = $_POST['sampai'];
+
+            $sql = "SELECT * FROM vorderdetail WHERE tglorder BETWEEN '$awal' AND '$sampai'";
+            
+             // Koneksi kedatabase
+            $db      = \Config\Database::connect();
+            $result = $db->query($sql);
+            // Untuk menampilkan query
+            $row = $result->getResult('array');
+
+            $data = [
+                'judul' => 'DATA RINCIAN ORDER',
+                // 'kategori' => $kategori,
+                'orderdetail' => $row
+            
+            ];
+
+            return view ("orderdetail/cari",$data);
+
+        } 
+    }
 }

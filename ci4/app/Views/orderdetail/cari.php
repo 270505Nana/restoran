@@ -56,7 +56,7 @@ if (isset($_GET['page_page'])) {
         </tr>
 
         <?php $no ?>
-        <?php foreach($orderdetail as $key => $value):?>
+        <?php foreach($orderdetail as $value):?>
         <tr>
             <td><?= $no++ ?></td>
             <td><?= $value['tglorder'] ?></td>
@@ -68,6 +68,5 @@ if (isset($_GET['page_page'])) {
         <?php endforeach;?>
         <!-- $orderdetail object dari controller orderdetail -->
     </table>
-    <?= $pager->links('page','bootstrap') ?>
 </div>
 <?= $this->endSection() ?>
