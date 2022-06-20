@@ -92,3 +92,10 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
  6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
  7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-20 03:46:18 --> Undefined variable $id
+in APPPATH\Controllers\Admin\Order.php on line 88.
+ 1 APPPATH\Controllers\Admin\Order.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Controllers\\Admin\\Order.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Order->detail('3')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

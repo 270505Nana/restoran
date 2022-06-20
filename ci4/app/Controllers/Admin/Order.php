@@ -80,29 +80,54 @@ class Order extends BaseController
         return view('order/update',$data);
     }
 
+    public function detail($id = null){
+
+        $db      = \Config\Database::connect();
+
+        // Membuat perintah sql untuk database
+        $sql = "SELECT * FROM vorder WHERE idorder = $id";
+        $result = $db->query($sql);
+        // Untuk menampilkan query
+        $row = $result->getResult('array');
+
+        $sql = "SELECT * FROM vorderdetail WHERE idorder = $id";
+        $result = $db->query($sql);
+        // Untuk menampilkan query
+        $detail = $result->getResult('array');
+
+        $data =
+        [
+            'judul'   => "PEMBAYARAN PELANGGAN",
+            'order'   => $row,
+            'detail'  => $detail
+        ];
+
+        session()->setFlashdata('pesan', "PEMBAYARAN LUNAS!");
+        return view('order/detail',$data);
+    }
+
     public function update()
     {
-        // dalam [] sesuai dengan name di form update. update.php
-        $idorder = $_POST['idorder'];
-        $total   = $_POST['total'];
-        $bayar   = $_POST['bayar'];
 
-        if($bayar < $total){
-           
-            session()->setFlashdata('info', "Pembayaran Kurang!");
-            return redirect()->to(base_url("/admin/order/find/$idorder")); 
-        }else{
-           $kembali = $bayar - $total;
-           $sql = "UPDATE tblorder SET bayar=$bayar, kembali=$kembali, status=1 WHERE idorder=$idorder";
-           $db      = \Config\Database::connect();
-           $db->query($sql);
-           session()->setFlashdata('info', "Pembayaran Berhasil!");
-           return redirect()->to(base_url("/admin/order")); 
-           
-           
-        }
+        if (isset($_POST['bayar'])) {
+        
+            // dalam [] sesuai dengan name di form update. update.php
+            $idorder = $_POST['idorder'];
+            $total   = $_POST['total'];
+            $bayar   = $_POST['bayar'];
 
-     
-       
+            if($bayar < $total){
+            
+                session()->setFlashdata('info', "Pembayaran Kurang!");
+                return redirect()->to(base_url("/admin/order/find/$idorder")); 
+            }else{
+                $kembali = $bayar - $total;
+                $sql = "UPDATE tblorder SET bayar=$bayar, kembali=$kembali, status=1 WHERE idorder=$idorder";
+                $db      = \Config\Database::connect();
+                $db->query($sql);
+                session()->setFlashdata('info', "Pembayaran Berhasil!");
+                return redirect()->to(base_url("/admin/order")); 
+            }
+        }       
     }
 }

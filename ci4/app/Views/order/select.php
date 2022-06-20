@@ -58,11 +58,11 @@ if (isset($_GET['page'])) {
                     <td>
                         <?php if ($value['status'] == 1) { $status = "LUNAS";?>
 
-                            <a class="btn btn-primary"> <?= $status?></a>
+                            <a href="<?= base_url()?>/admin/order/detail/<?= $value['idorder']?>" class="btn btn-primary"> <?= $status?></a>
 
                             <?php } else { $status = "BELUM LUNAS";?>
                             
-                            <a href="<?= base_url()?>/admin/order/find/<?= $value['idorder']?>"class="btn btn-danger">
+                            <a href="<?= base_url()?>/admin/order/find/<?= $value['idorder']?>" class="btn btn-danger">
                             <?= $status?>
                             </a>
                     
