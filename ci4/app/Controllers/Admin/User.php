@@ -7,49 +7,32 @@
 //kalo di ci 3 gapake app\controller
 
 use App\Controllers\BaseController;
+// pemanggilan model kategori
+use App\Models\User_M;
+
 class User extends BaseController
 {
-    // var
-    protected $session = null;
-
-    public function __construct()
-    {
-        $this->session = \Config\Services::session();
-    }
 
     public function index()
     {
-        echo "user";
-    }
+        // Pagination
+        $pager = \Config\Services::pager();
 
-    public function create()
-    {
-        $tbluser = [
-            'user'  => 'Nana',
-            'email' => 'nana@gmail.com',
-            'level' => 'Programmer'
+        // membuat object
+        $model_nana = new User_M();
+        // $kategori = $model_nana -> findAll();
+        // findAll : fungsi dari CI
+        
+        $data = [
+            'judul' => 'DATA USER',
+            // 'kategori' => $kategori,
+            'user' => $model_nana->paginate(2, 'page'),
+            'pager' => $model_nana->pager,
+        
         ];
-
-        $this->session->set($tbluser);
+    
+        return view ("user/select",$data);
     }
 
-   public function read()
-   {
-    $session = \Config\Services::session();
-    echo $this->session->get('user');
-    echo"<br>";
-    echo $this->session->get('email');
-    echo"<br>";
-    echo $this->session->get('level'); 
-   }
-
-   public function delete()
-   {
-    $this->session->remove('email');
-   }
-
-   public function destroy()
-   {
-    $session->destroy;
-   }
+   
 }
