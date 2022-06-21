@@ -70,7 +70,7 @@ $routes->get('login', 'Admin\Login::index');
 
     $routes -> add ('user','Admin\user::index');
     $routes -> add ('user/find/(:any)','Admin\user::find/$1');
-    $routes -> add ('user/delete/(:any)','Admin\user::delete/$1');
+    $routes -> add ('user /delete/(:any)','Admin\user ::delete/$1');
     // $routes -> add ('user','Admin\user::index');
  });
 
