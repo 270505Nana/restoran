@@ -59,7 +59,7 @@ if (isset($_GET['page_page'])) {
             </td>
 
             <td><a onclick="return confirm('Hapus Data?')" href="<?= base_url()?>/admin/user/delete/<?= $value['iduser']?>"><img src="<?= base_url('/icon/trash.svg')?>"></a>
-            <a href="<?= base_url()?>/admin/user/find/<?= $value['iduser']?>"><img src="<?= base_url('/icon/pencil.svg')?>"></a></td>
+            <a onclick="return confirm('Ubah Status?')"  href="<?= base_url()?>/admin/user/find/<?= $value['iduser']?>"><img src="<?= base_url('/icon/pencil.svg')?>"></a></td>
         </tr>
         <?php endforeach;?>
         <!-- $user object dari controller user -->

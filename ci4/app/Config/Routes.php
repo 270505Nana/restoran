@@ -36,10 +36,10 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/admin', 'Admin\Login::index');
+$routes->get('/login', 'Admin\Login::index');
 //  $routes->get('/kategori/(:any)', 'admin\kategori::selectWhere/$1');
 
- $routes->group('admin',function($routes){
+ $routes->group('admin',['filter' => 'Auth'],function($routes){
     
     $routes -> add ('/','Admin\adminpage::index');
     $routes -> add ('kategori','Admin\kategori::read');
@@ -48,6 +48,12 @@ $routes->get('/admin', 'Admin\Login::index');
     $routes -> add ('kategori/find/(:any)','Admin\kategori::find/$1');
     $routes -> add ('kategori/update','Admin\kategori::update');
     $routes -> add ('kategori/delete/(:any)','Admin\kategori::delete/$1');
+
+    $routes -> add ('menu','Admin\menu::index');
+    $routes -> add ('pelanggan','Admin\pelanggan::index');
+    $routes -> add ('order','Admin\order::index');
+    $routes -> add ('orderdetail','Admin\orderdetail::index');
+    $routes -> add ('user','Admin\user::index');
  });
 
 

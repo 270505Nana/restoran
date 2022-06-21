@@ -48,6 +48,11 @@
                                     }
                                 ?>
                             </li>
+                                    
+                            <li class="nav-item mt-2">
+                               <a class="ml-3" href="<?= base_url('admin/login/logout')?>"> | Logout
+                               </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
