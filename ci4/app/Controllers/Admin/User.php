@@ -106,5 +106,30 @@ class User extends BaseController
         return redirect()->to(base_url("/admin/user")); 
     }
 
+    public function find($id = null){
 
+        $model = new User_M();
+        $user = $model->find($id);
+
+        $data = [
+            'judul' => 'UPDATE DATA USER',
+            'user' => $user,
+            'level' => ['Admin','Koki','Kasir']
+        ];
+        return view("user/update", $data);
+    }
+
+    public function update_user()
+    {
+        $id = $_POST['iduser'];
+        $data = 
+        [
+            'email' => $_POST['email'],
+            'level' => $_POST['level']
+        ];
+        $model = new User_M();
+
+        $model->update($id,$data);
+        return redirect()->to(base_url("/admin/user")); 
+    }
 }
