@@ -12,7 +12,6 @@ use App\Models\User_M;
 
 class User extends BaseController
 {
-
     public function index()
     {
         // Pagination
