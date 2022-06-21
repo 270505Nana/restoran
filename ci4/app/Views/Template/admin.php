@@ -12,34 +12,43 @@
     <div class="container">
         <div class="row mt-2">
             <div class="col">
-                <nav class="navbar bg-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="<?= base_url('/admin')?>">Admin Page</a>
 
-                        <div>
-                            <?php 
-                                if (!empty(session()->get('user'))) {
-                                    echo session()->get('user');
-                                }
-                            ?>
-                        </div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="<?= base_url('/admin')?>">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item mt-2">User : </li>
+                            <li class="nav-item mr-4">
+                                <a class="nav-link" href="#">
+                                    <?php 
+                                        if (!empty(session()->get('user'))) {
+                                            echo session()->get('user');
+                                        }
+                                    ?>
+                                </a>
+                            </li>
 
-                        <div>
-                            <?php 
-                                if (!empty(session()->get('email'))) {
-                                    echo session()->get('email');
-                                }
-                            ?>
-                        </div>
+                            <li class="nav-item mt-2"> | Email : </li>
+                            <li class="nav-item mt-2">
+                                <?php 
+                                    if (!empty(session()->get('email'))) {
+                                        echo session()->get('email');
+                                    }
+                                ?> 
+                            </li>
 
-                        <div>
-                            <?php 
-                                if (!empty(session()->get('level'))) {
-                                    echo session()->get('level');
-                                }
-                            ?>
-                        </div>
-
+                            <li class="nav-item mt-2"> | Posisi : </li>
+                            <li class="nav-item mt-2">
+                                <?php 
+                                    if (!empty(session()->get('level'))) {
+                                        echo session()->get('level');
+                                    }
+                                ?>
+                            </li>
+                        </ul>
                     </div>
                 </nav>
             </div>

@@ -36,7 +36,7 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-// $routes->get('/', 'Login::index');
+$routes->get('/admin', 'Admin\Login::index');
 //  $routes->get('/kategori/(:any)', 'admin\kategori::selectWhere/$1');
 
  $routes->group('admin',function($routes){

@@ -9,23 +9,29 @@ use App\Models\User_M;
 class Login extends BaseController
 {
     public function index()
-    {if ($this->request->getMethod() == 'post') {
+    {
+        $data=[];
+        if ($this->request->getMethod() == 'post') {
         $email    = $this->request->getPost('email');
         $password = $this->request->getPost('password');
 
         $model = new User_M();
         $user = $model->where(['email' => $email, 'password'=> $password, 'aktif' => 1])->first();
 
-        print_r($user);
-
-        $this->setSession($user);
+        if (empty($user)) {
+            $data['info'] = "User Atau Password Anda Salah";
+        }else{
+            $this->setSession($user);
+            return redirect()->to(base_url("/admin")); 
+        }
+        
 
     } else {
         # code...
     }
     
 
-        return view('template/login');
+        return view('template/login', $data);
     }
     
     public function setSession($user)

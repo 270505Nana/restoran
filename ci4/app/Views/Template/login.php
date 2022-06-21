@@ -11,6 +11,14 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-5 mx-auto">
+
+            <?php 
+            if(!empty($info)) {
+                echo '<div class="alert alert-danger" role="alert">';
+                echo $info; 
+                echo '</div>';
+            }
+            ?>
                 <span>
                     <h1>LOGIN ADMIN</h1>
                 </span>
