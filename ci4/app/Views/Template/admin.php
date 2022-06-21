@@ -15,6 +15,31 @@
                 <nav class="navbar bg-light">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="<?= base_url('/admin')?>">Admin Page</a>
+
+                        <div>
+                            <?php 
+                                if (!empty(session()->get('user'))) {
+                                    echo session()->get('user');
+                                }
+                            ?>
+                        </div>
+
+                        <div>
+                            <?php 
+                                if (!empty(session()->get('email'))) {
+                                    echo session()->get('email');
+                                }
+                            ?>
+                        </div>
+
+                        <div>
+                            <?php 
+                                if (!empty(session()->get('level'))) {
+                                    echo session()->get('level');
+                                }
+                            ?>
+                        </div>
+
                     </div>
                 </nav>
             </div>

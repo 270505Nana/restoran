@@ -99,3 +99,27 @@ in APPPATH\Controllers\Admin\Order.php on line 88.
  3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
  4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-20 21:51:07 --> Undefined variable $email
+in APPPATH\Controllers\Admin\Login.php on line 37.
+ 1 APPPATH\Controllers\Admin\Login.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email', 'APPPATH\\Controllers\\Admin\\Login.php', 37)
+ 2 APPPATH\Controllers\Admin\Login.php(21): App\Controllers\Admin\Login->setSession([...])
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Login->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-20 21:53:35 --> Undefined variable $email
+in APPPATH\Controllers\Admin\Login.php on line 37.
+ 1 APPPATH\Controllers\Admin\Login.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email', 'APPPATH\\Controllers\\Admin\\Login.php', 37)
+ 2 APPPATH\Controllers\Admin\Login.php(21): App\Controllers\Admin\Login->setSession([...])
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Login->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-20 21:54:48 --> Undefined variable $email
+in APPPATH\Controllers\Admin\Login.php on line 37.
+ 1 APPPATH\Controllers\Admin\Login.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email', 'APPPATH\\Controllers\\Admin\\Login.php', 37)
+ 2 APPPATH\Controllers\Admin\Login.php(21): App\Controllers\Admin\Login->setSession([...])
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin\Login->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
